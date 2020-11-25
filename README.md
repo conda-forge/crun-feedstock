@@ -11,7 +11,7 @@ Summary: crun - a fast and lightweight OCI runtime
 
 Development: https://github.com/containers/crun
 
-Documentation: https://github.com/containers/crun/blob/0.15.1/crun.1.md
+Documentation: https://github.com/containers/crun/blob/0.16/crun.1.md
 
 crun is a command line program for running Linux containers that follow the Open Container Initiative (OCI) format.
 

@@ -1,4 +1,4 @@
-{% set version = "0.15.1" %}
+{% set version = "0.16" %}
 
 package:
   name: crun
@@ -6,18 +6,18 @@ package:
 
 source:
   url: https://github.com/containers/crun/releases/download/{{ version }}/crun-{{ version }}.tar.xz
-  sha256: 10937b379e6f59aa84f21702564b85fb8ec453fdc4a424f19935c4f5c118da13
+  sha256: 0c2d1af85d27bd1e7263e8be1384643629e3cbacc598437a811587db8e86027d
   patches:
     # NOTE: This add syscalls only available from Linux 3.0 (setns) and 3.17 (seccomp, memfd_create) onward.
     - 0001-Add-missing-defines-for-CentOS-6.patch
 
 build:
   number: 0
-  skip: True  # [not linux]
+  skip: true  # [not linux]
   # Binary relocation causes:
   #   crun: error while loading shared libraries: libyajl.so.2: cannot open shared object file: No such file or directory
   # because of https://github.com/containers/crun/commit/ce4dfbb97a8a05bef125030eaa6c46c07a5f9344
-  binary_relocation: False
+  binary_relocation: false
 
 requirements:
   build:
