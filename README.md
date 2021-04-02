@@ -11,7 +11,7 @@ Summary: crun - a fast and lightweight OCI runtime
 
 Development: https://github.com/containers/crun
 
-Documentation: https://github.com/containers/crun/blob/0.16/crun.1.md
+Documentation: https://github.com/containers/crun/blob/0.19/crun.1.md
 
 crun is a command line program for running Linux containers that follow the Open Container Initiative (OCI) format.
 
@@ -132,9 +132,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
