@@ -1,15 +1,12 @@
-{% set version = "0.16" %}
+{% set version = "1.23.1" %}
 
 package:
   name: crun
   version: {{ version }}
 
 source:
-  url: https://github.com/containers/crun/releases/download/{{ version }}/crun-{{ version }}.tar.xz
-  sha256: 0c2d1af85d27bd1e7263e8be1384643629e3cbacc598437a811587db8e86027d
-  patches:
-    # NOTE: This add syscalls only available from Linux 3.0 (setns) and 3.17 (seccomp, memfd_create) onward.
-    - 0001-Add-missing-defines-for-CentOS-6.patch
+  url: https://github.com/containers/crun/releases/download/{{ version }}/crun-{{ version }}.tar.gz
+  sha256: d752b7cee413d2cb9463cb6995fd50801a0a1574507ebfb550ea9f26d07743f8
 
 build:
   number: 0
@@ -22,6 +19,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - autoconf >=2.69
     - automake >=1.11.2
     - gperf
@@ -67,3 +65,4 @@ about:
 extra:
   recipe-maintainers:
     - mbargull
+    - 2themaxx
