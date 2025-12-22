@@ -1,4 +1,4 @@
-{% set version = "1.23.1" %}
+{% set version = "1.26" %}
 
 package:
   name: crun
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/containers/crun/releases/download/{{ version }}/crun-{{ version }}.tar.gz
-  sha256: d752b7cee413d2cb9463cb6995fd50801a0a1574507ebfb550ea9f26d07743f8
+  sha256: 32211d0160ac092a71d1b0623232342d627dd601913a1fbb552d7d7d5b99bcc1
 
 build:
   number: 0
