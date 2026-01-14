@@ -17,4 +17,4 @@ docker_image:
 libcap:
 - '2.77'
 target_platform:
-- linux-64
+- linux-aarch64
