@@ -28,7 +28,6 @@ requirements:
     - pkg-config >=0.9.0
     # Unless you are also building the Python bindings, Python is needed only by libocispec to generate the C parser at build time, it won't be used afterwards.
     - python >=3
-    - sysroot_{{ target_platform }}
     # We build with --disable-systemd because we do not have systemd/sd-bus.h
     # which is only available in systemd v221 onward but CentOS 7 has v219.
     # - {{ cdt('systemd-devel') }}
