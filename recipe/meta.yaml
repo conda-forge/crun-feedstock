@@ -32,7 +32,7 @@ requirements:
     # which is only available in systemd v221 onward but CentOS 7 has v219.
     # - {{ cdt('systemd-devel') }}
   host:
-    - kernel-headers_{{ target_platform }}
+    - sysroot_{{ target_platform }}
     - libcap
     - libseccomp
     - yajl
