@@ -38,8 +38,8 @@ requirements:
 
 test:
   commands:
-    - _LIBCONTAINER_CLONED_BINARY=1 crun --help
-    - _LIBCONTAINER_CLONED_BINARY=1 crun --version
+    - crun --help
+    - crun --version
     - test -f "${PREFIX}/lib/libcrun${SHLIB_EXT}"
 
 about:
