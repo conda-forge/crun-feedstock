@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-./autoreconf -fiv
+autoreconf -fiv
 ./configure \
     --prefix="${PREFIX}" \
     --disable-systemd \
