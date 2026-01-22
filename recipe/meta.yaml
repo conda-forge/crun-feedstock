@@ -38,7 +38,7 @@ requirements:
 
 test:
   commands:
-    - export _LIBCONTACTER_CLONED_BINARY=1
+    - export _LIBCONTAINER_CLONED_BINARY=1
     - crun --help
     - crun --version
     - test -f "${PREFIX}/lib/libcrun${SHLIB_EXT}"
