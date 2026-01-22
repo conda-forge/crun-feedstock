@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-./autogen.sh
+./autoreconf -fiv
 ./configure \
     --prefix="${PREFIX}" \
     --disable-systemd \
