@@ -11,10 +11,6 @@ source:
 build:
   number: 1
   skip: true  # [not linux]
-  # Binary relocation causes:
-  #   crun: error while loading shared libraries: libyajl.so.2: cannot open shared object file: No such file or directory
-  # because of https://github.com/containers/crun/commit/ce4dfbb97a8a05bef125030eaa6c46c07a5f9344
-  binary_relocation: false
 
 requirements:
   build:
