@@ -18,7 +18,7 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
+    - {{ compiler("c") }}
     - {{ stdlib("c") }}
     - autoconf >=2.69
     - automake >=1.11.2
@@ -38,9 +38,11 @@ requirements:
 
 test:
   commands:
-    - export _LIBCONTAINER_CLONED_BINARY=1
-    - crun --help
-    - crun --version
+    # No linux-aarch64 and linux-ppc64le baremetal available on azure pipeline
+    # Skipping tests for the executable due to `memfd exec` not working on emulated platforms  
+    - crun --help  # [x86_64]
+    - crun --version  # [x86_64]
+
     - test -f "${PREFIX}/lib/libcrun${SHLIB_EXT}"
 
 about:

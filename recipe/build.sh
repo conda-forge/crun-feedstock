@@ -7,8 +7,7 @@ autoreconf -fiv
     --prefix="${PREFIX}" \
     --disable-systemd \
     --disable-static \
-    --enable-shared \
-    --disable-dynload-libcrun
+    --enable-shared
 
 make -j"${CPU_COUNT}"
 make install
