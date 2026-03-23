@@ -38,10 +38,8 @@ requirements:
 
 test:
   commands:
-    # No linux-aarch64 and linux-ppc64le baremetal available on azure pipeline
-    # Skipping tests for the executable due to `memfd exec` not working on emulated platforms  
-    - crun --help  # [x86_64]
-    - crun --version  # [x86_64]
+    - crun --help
+    - crun --version
 
     - test -f "${PREFIX}/lib/libcrun${SHLIB_EXT}"
 
