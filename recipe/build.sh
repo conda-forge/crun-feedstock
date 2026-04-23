@@ -1,10 +1,13 @@
 #! /usr/bin/env bash
 
-autoreconf -fis
+export CPPFLAGS="${CPPFLAGS} -DSOL_NETLINK=270"
+
+autoreconf -fiv
 ./configure \
     --prefix="${PREFIX}" \
     --disable-systemd \
     --disable-static \
     --enable-shared
+
 make -j"${CPU_COUNT}"
 make install
