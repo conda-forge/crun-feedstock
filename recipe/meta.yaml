@@ -1,4 +1,4 @@
-{% set version = "1.23.1" %}
+{% set version = "1.28" %}
 
 package:
   name: crun
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/containers/crun/releases/download/{{ version }}/crun-{{ version }}.tar.gz
-  sha256: d752b7cee413d2cb9463cb6995fd50801a0a1574507ebfb550ea9f26d07743f8
+  sha256: eb8fe73ffe44d868b14bb94fa6c295bd57e8bf023de43b61579da826c07cc406
 
 build:
-  number: 1
+  number: 0
   skip: true  # [not linux]
   # Binary relocation causes:
   #   crun: error while loading shared libraries: libyajl.so.2: cannot open shared object file: No such file or directory
