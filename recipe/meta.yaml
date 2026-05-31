@@ -1,4 +1,4 @@
-{% set version = "1.27.1" %}
+{% set version = "1.27" %}
 
 package:
   name: crun
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/containers/crun/releases/download/{{ version }}/crun-{{ version }}.tar.gz
-  sha256: be7a71c455c918bbab0c03de64cf5ce4693c7164821ab3dce0bb0f579216e8f0
+  sha256: 99077cc701a9f6842f70384eb05e9429da1ad338cdef3e0bac5a486cbf2ca75d
 
 build:
   number: 0
@@ -18,7 +18,7 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
+    - {{ compiler("c") }}
     - {{ stdlib("c") }}
     - autoconf >=2.69
     - automake >=1.11.2
@@ -34,15 +34,13 @@ requirements:
   host:
     - libcap
     - libseccomp
-    - yajl >=2.1.0
     - yajl
-  run:
-    - {{ pin_compatible('yajl') }}
 
 test:
   commands:
     - crun --help
     - crun --version
+
     - test -f "${PREFIX}/lib/libcrun${SHLIB_EXT}"
 
 about:
