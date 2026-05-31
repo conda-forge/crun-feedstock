@@ -2,7 +2,7 @@
 
 package:
   name: crun
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://github.com/containers/crun/releases/download/{{ version }}/crun-{{ version }}.tar.gz
