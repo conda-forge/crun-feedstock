@@ -22,7 +22,6 @@ requirements:
     - {{ stdlib("c") }}
     - autoconf >=2.69
     - automake >=1.11.2
-    - json-c
     - gperf
     - libtool
     - make
@@ -36,6 +35,7 @@ requirements:
     - libcap
     - libseccomp
     - yajl
+    - json-c
 
 test:
   commands:
