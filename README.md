@@ -11,7 +11,7 @@ Summary: crun - a fast and lightweight OCI runtime
 
 Development: https://github.com/containers/crun
 
-Documentation: https://github.com/containers/crun/blob/1.27/crun.1.md
+Documentation: https://github.com/containers/crun/blob/1.29.1/crun.1.md
 
 crun is a command line program for running Linux containers that follow the Open Container Initiative (OCI) format.
 
@@ -20,7 +20,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>GitHub Actions</td>
+    <td>
+      <a href="https://github.com/conda-forge/crun-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/crun-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
+    </td>
+  </tr>
 </table>
 
 Current release info
@@ -40,31 +47,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `crun` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install crun
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install crun
 ```
 
-It is possible to list all of the versions of `crun` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add crun
+# for installing globally
+pixi global install crun
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `crun` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search crun --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search crun --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search crun --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -76,6 +125,8 @@ mamba repoquery whoneeds crun --channel conda-forge
 # List dependencies of `crun`:
 mamba repoquery depends crun --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
