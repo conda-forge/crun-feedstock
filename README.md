@@ -11,7 +11,7 @@ Summary: crun - a fast and lightweight OCI runtime
 
 Development: https://github.com/containers/crun
 
-Documentation: https://github.com/containers/crun/blob/1.27/crun.1.md
+Documentation: https://github.com/containers/crun/blob/1.28/crun.1.md
 
 crun is a command line program for running Linux containers that follow the Open Container Initiative (OCI) format.
 
@@ -20,7 +20,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>GitHub Actions</td>
+    <td>
+      <a href="https://github.com/conda-forge/crun-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/crun-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
+    </td>
+  </tr>
 </table>
 
 Current release info

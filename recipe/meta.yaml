@@ -1,4 +1,4 @@
-{% set version = "1.27" %}
+{% set version = "1.28" %}
 
 package:
   name: crun
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/containers/crun/releases/download/{{ version }}/crun-{{ version }}.tar.gz
-  sha256: 99077cc701a9f6842f70384eb05e9429da1ad338cdef3e0bac5a486cbf2ca75d
+  sha256: eb8fe73ffe44d868b14bb94fa6c295bd57e8bf023de43b61579da826c07cc406
 
 build:
   number: 0
@@ -35,6 +35,7 @@ requirements:
     - libcap
     - libseccomp
     - yajl
+    - json-c
 
 test:
   commands:
